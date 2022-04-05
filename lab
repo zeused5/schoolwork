@@ -1,0 +1,75 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Survey</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+           
+            .submit button {
+                width: 6%; float:left;
+            }
+
+            label {
+                display: inline-block;
+                width:150px;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Dog Survey</h1>
+            </header>
+            <p> Please enter your name, address, age, email, and pick one of the five dog breeds that you enjoy the most.</p>
+                <form method="post" action="form.php" id="voting_form">
+                <label for="firstName">First name (no spaces): </label>
+                <input type="text" id="firstName" pattern="[^' ']+" name="firstName"><br>
+
+                <label for="address">Address: </label>
+                <input type="text" id="address" name="address"><br>
+
+                <label for="age">Age: </label>
+                <input type="number" id="age" name="age"><br>
+
+                <label for="email">E-mail Address: </label>
+                <input type="email" required id="email" name="email"><br>
+
+                <label for="dog">Dog Breed</label>
+                <select id="dog" name="dog">
+                    <option value="none">none</option>
+                    <option value="goldenretriever">Golden Retriever</option>
+                    <option value="germanshephard">German Shephard</option>
+                    <option value="pug">Pug</option>
+                    <option value="husky">Husky</option>
+                    <option value="poodle">Poodle</option> 
+                </select><br>
+                <p>Check what values you look for in a dog. Select all that apply.</p>
+                <label for="smalldog">Small dog</label><input type="checkbox" id="smalldog" name="smalldog" value="1"><br>
+                <label for="largedog">Large dog</label><input type="checkbox" id="largedog" name="largedog" value="2"><br>
+                <label for="guarddog">Guard dog</label><input type="checkbox" id="guarddog" name="guarddog" value="3"><br>
+                <label for="quietdog">Quiet dog</label><input type="checkbox" id="quietdog" name="quietdog" value="4"><br>
+                <label for="energeticdog">Energetic dog</label><input type="checkbox" id="energeticdog" name="energeticdog" value="5">
+
+                <fieldset>
+                    <legend>Do you prefer older or younger dogs?</legend>
+                    <label for="younger">Younger</label><input type="radio" id="younger" name="same" value="young">
+                    <label for="older">Older</label><input type="radio" id="older" name="same" value="old">
+                    <label for="none">No Preference</label><input type="radio" id="none" name="same" value="no">
+                </fieldset>
+                <label for="text">Why?</label>
+                <textarea id="text" name="user_assistance"></textarea>
+
+                <div class="submit">
+                <button type="submit">Enter</button>
+                <button type="reset">Clear</button>
+                </div><br>
+
+            </form>
+            <footer>
+                <p>Webmaster: Zeus<br>
+                Last Updated: 4/4/22</p>
+            </footer>
+    </body>
+</html>
